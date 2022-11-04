@@ -1,2 +1,2 @@
-# docker-ci-cd
-Docker Project
+# Docker CI-CD Project ♾
+## Continuous Integration - Continuos Deployment 💕
