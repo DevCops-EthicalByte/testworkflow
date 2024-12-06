@@ -16,3 +16,11 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag dockfile:$(date +%s)
+
+    - name: build and push docker image
+      uses: mr-smithers-excellent/docker-build-push@v4
+      with:
+        image: hubshareff/cigit
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
